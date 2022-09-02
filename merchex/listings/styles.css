@@ -1,0 +1,93 @@
+:root {
+    --chrome: rgb(60, 60, 60);
+}
+
+* {
+    background: rgb(228, 228, 228);
+    background-color: white;
+    font-size: 19px;
+}
+
+body {
+    margin: 0px;
+}
+
+nav {
+    margin: 0px;
+    margin-top: 0px;
+    width: 100%;
+    height: auto;
+    display: inline-block;
+    background-color: var(--chrome);
+}
+
+nav a {
+    text-decoration: none;
+    display: inline-block;
+    padding: 12px 17px;
+    margin-left: 0px;
+    margin-right: 0px;
+    color: white;
+    background-color: var(--chrome);
+    font-size: 20px;
+}
+
+nav a:hover {
+    background-color: grey;
+}
+
+nav a:active {
+    color: var(--chrome);
+    background-color: rgb(232, 232, 232);
+}
+
+main {
+    /* margin-right: 20px;
+    margin-left: 20px; */
+}
+
+h1 {
+    text-align: center;
+    display: block;
+    background-color: rgb(109 160 163);
+    color: white;
+    font-size: 30px;
+    padding: 5px;
+}
+
+h2 {
+    text-align: center;
+    display: block;
+    background-color: rgb(91 162 145);
+    color: white;
+    font-size: 25px;
+    padding: 5px;
+}
+
+h3 {
+    margin: 0px;
+}
+
+.card {
+    margin: auto;
+    box-shadow: rgb(195, 195, 195) 4px 4px 20px;
+    width: 50%;
+}
+
+
+/* .card>h3,
+.card>p,
+.card>ul,
+.card>li,
+.card>a {
+    margin-left: 20px;
+} */
+
+.card-content {
+    padding: 20px;
+}
+
+.errorlist {
+    margin-bottom: -10px;
+    color: red;
+}

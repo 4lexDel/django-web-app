@@ -1,0 +1,25 @@
+{% extends 'listings/base.html' %} {% block content %}
+
+<div class="card">
+    <h2>{{ listing.title }}</h2>
+
+    <div class="card-content">
+        <h3>Informations diverses</h3>
+
+        <ul>
+            <li>Description : {{ listing.description }}</li>
+            <li>Année : {{ listing.year }}</li>
+            <li>Vendus : {{ listing.sold|yesno }}</li>
+            <li>Type : {{ listing.get_type_display }}</li>
+            {% if listing.band %}
+            <li>Artiste : <a href="{% url 'band-detail' listing.band.id %}">{{ listing.band }}</a></li>
+            {% endif %}
+        </ul>
+
+        <a href="{% url 'listing-change' listing.id %}">Editer l'article</a>
+        <a href="{% url 'listing-delete' listing.id %}">Supprimer l'article</a>
+        <a href="{% url 'listing-list' %}">Retourner à la liste des articles</a>
+    </div>
+</div>
+
+{% endblock %}

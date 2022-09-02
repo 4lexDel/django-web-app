@@ -1,0 +1,52 @@
+-------------------
+New project : django-admin startproject [NAME]
+
+    Maintenant, lorsque nous utiliserons l'utilitaire de ligne de commande de Django, 
+    nous l'appellerons via manage.py au lieu de django-admin. 
+    En fait, manage.py est conçu pour fonctionner spécifiquement avec notre projet, 
+    alors que django-admin est une version plus générique de l'utilitaire.
+
+-------------------
+Run server : python manage.py runserver
+
+-------------------
+New app : python manage.py startapp listings
+--> « installer » l'application dans le projet
+
+-------------------
+Migration (new schema) : python manage.py makemigrations
+
+-------------------
+Appliquer a la BDD : python manage.py migrate
+
+-------------------
+Shell django : python manage.py shell
+
+
+-------------------
+BDD :
+from listings.models import Listing
+
+lt = Listing()
+
+lt.title = 'CONTENT'
+lt.save()
+- ou
+lt = Listing.objects.create(title='CONTENT')  
+
+Nombre de n-uplet : Listing.objects.count()
+Get all n-uplet : Listing.objects.all()
+
+------------------- 
+Les migrations : https://openclassrooms.com/fr/courses/7172076-debutez-avec-le-framework-django/7517066-surmontez-les-pieges-courants-de-la-migration
+
+
+-------------------
+Déploiement : 
+https://docs.djangoproject.com/fr/4.1/howto/deployment/
+https://openclassrooms.com/fr/courses/4425101-deployez-une-application-django
+
+
+-------------------
+Aller plus loin :
+https://openclassrooms.com/fr/courses/7192426-allez-plus-loin-avec-le-framework-django

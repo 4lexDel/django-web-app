@@ -1,0 +1,14 @@
+{% extends 'listings/base.html' %} {% block content %}
+
+<h1>Supprimer l'article</h1>
+
+<div class="card card-content">
+    <p>Etes-vous sûr de vouloir supprimer l'article : {{ listing.title }} ?</p>
+    <form action="" method="post">
+        {% csrf_token %}
+        <input type="submit" value="Supprimer">
+    </form>
+    <a href="{% url 'listing-list' %}">Retourner à la liste des articles</a>
+</div>
+
+{% endblock %}
